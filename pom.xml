@@ -5,6 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>za.ac.cput</groupId>
+<<<<<<< HEAD
     <artifactId>ResidenceLaundryBookingSystem</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -21,4 +22,15 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+=======
+    <artifactId>Residence-laundery-booking-system</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+>>>>>>> 24089b37da33d92fd10ebf69c2d53afa19fcecc6
 </project>
