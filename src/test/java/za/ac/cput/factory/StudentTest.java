@@ -1,7 +1,8 @@
+package za.ac.cput.factory;
+
 import za.ac.cput.domain.Student;
 
 import org.junit.jupiter.api.*;
-import za.ac.cput.factory.StudentFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 
