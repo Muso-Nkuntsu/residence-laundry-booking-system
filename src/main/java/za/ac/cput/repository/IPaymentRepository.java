@@ -5,9 +5,4 @@ import java.util.Set;
 
 public interface IPaymentRepository extends IRepository<Payment, String> {
     Set<Payment> getAll();
-
-    @Override
-    default Payment read(String s) {
-        return null;
-    }
 }
