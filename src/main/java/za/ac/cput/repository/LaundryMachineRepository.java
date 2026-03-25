@@ -1,6 +1,7 @@
 package za.ac.cput.repository;
 
 import za.ac.cput.domain.LaundryMachine;
+import za.ac.cput.repository.ILaundryMachineRepository;
 
 import java.util.HashSet;
 import java.util.Set;

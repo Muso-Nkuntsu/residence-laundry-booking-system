@@ -5,17 +5,14 @@ public class LaundryMachine {
     protected int machineNumber;
     protected String status;
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 24089b37da33d92fd10ebf69c2d53afa19fcecc6
     private LaundryMachine(Builder builder) {
         this.machineId = builder.machineId;
         this.machineNumber = builder.machineNumber;
         this.status = builder.status;
     }
 
-<<<<<<< HEAD
+
     public String getMachineId() {
         return machineId;
     }
@@ -28,8 +25,7 @@ public class LaundryMachine {
         return status;
     }
 
-=======
->>>>>>> 24089b37da33d92fd10ebf69c2d53afa19fcecc6
+
     @Override
     public String toString() {
         return "LaundryMachine{" +
@@ -63,9 +59,6 @@ public class LaundryMachine {
             return new LaundryMachine(this);
         }
     }
-<<<<<<< HEAD
-}
-=======
+
 }
 
->>>>>>> 24089b37da33d92fd10ebf69c2d53afa19fcecc6

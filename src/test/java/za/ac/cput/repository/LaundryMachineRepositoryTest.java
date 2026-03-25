@@ -1,8 +1,7 @@
-package za.ac.cput.repository.impl;
+package za.ac.cput.repository;
 
 import org.junit.jupiter.api.Test;
 import za.ac.cput.domain.LaundryMachine;
-import za.ac.cput.repository.LaundryMachineRepository;
 
 import static org.junit.jupiter.api.Assertions.*;
 
