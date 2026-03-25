@@ -24,6 +24,18 @@ public class Booking {
                 '}';
     }
 
+    public String getBookingID() {
+        return bookingID;
+    }
+
+    public String getBookingStatus() {
+        return bookingStatus;
+    }
+
+    public LocalDate getBookingDate() {
+        return bookingDate;
+    }
+
     public static class Builder {
 
             private String bookingID;
@@ -37,7 +49,7 @@ public class Booking {
                 return this;
         }
 
-            public Builder setBookingId(String bookingID) {
+            public Builder setBookingID(String bookingID) {
                 this.bookingID = bookingID;
                 return this;
             }

@@ -2,7 +2,7 @@ package za.ac.cput.util;
 import java.util.regex.Pattern;
 
 
-public class Helpler {
+public class Helper {
     public static boolean isNullOrEmpty(String s){
         return s == null || s.isEmpty() || s.isBlank();
     }
