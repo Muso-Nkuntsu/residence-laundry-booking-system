@@ -33,7 +33,7 @@ import static org.junit.jupiter.api.Assertions.*;
          Student updatedStudent = StudentFactory.createStudent("231223558", "Muso","Nkuntsu", "2312235582@mycput.ac.za");
          Student updated = repository.update(updatedStudent);
          assertNotNull(updated);
-         assertEquals("Muso Updated ", updated.getName());
+         assertEquals("Muso", updated.getName());
      }
      @Test
      void delete(){

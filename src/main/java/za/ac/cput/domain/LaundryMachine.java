@@ -23,6 +23,20 @@ public class LaundryMachine {
         return status;
     }
 
+
+    public String getMachineId() {
+        return machineId;
+    }
+
+    public int getMachineNumber() {
+        return machineNumber;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+
     @Override
     public String toString() {
         return "LaundryMachine{" +
@@ -56,5 +70,6 @@ public class LaundryMachine {
             return new LaundryMachine(this);
         }
     }
+
 }
 
