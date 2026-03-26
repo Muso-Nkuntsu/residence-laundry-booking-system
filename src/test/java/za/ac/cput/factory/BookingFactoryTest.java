@@ -19,19 +19,22 @@ import java.time.LocalDate;
          assertEquals("Confirmed", booking.getBookingStatus());
      }
      @Test
-     void testCreateBookingWithNullID(){
-         Booking booking = BookingFactory.createBooking(null,
-                 LocalDate.now(),
-                 "Confirmed");
+     void testCreateBookingWithNullID() {
+         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+             Booking booking = BookingFactory.createBooking(null,
+                     LocalDate.now(),
+                     "Confirmed");
 
-         assertNull(booking);
+         });
+         assertEquals("Booking ID cannot be null or empty", exception.getMessage());
      }
      @Test
      void testCreateBookingWithEmptyStatus(){
-         Booking booking = BookingFactory.createBooking("Talent",
-                 LocalDate.now(),
-                 "");
+         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+             Booking booking = BookingFactory.createBooking("Talent",
+                     LocalDate.now(),
+                     "");
 
-         assertNull(booking);
+         });   assertEquals("Booking status cannot be null or empty", exception.getMessage());
      }
 }

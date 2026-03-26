@@ -8,13 +8,13 @@ public class BookingFactory {
 
     public static Booking createBooking(String bookingID, LocalDate bookingDate, String bookingStatus){
         if(bookingID == null || bookingID.isEmpty()){
-            return null;
+            throw new IllegalArgumentException("Booking ID cannot be null or empty");
         }
         if(bookingDate == null){
-            return null;
+            throw new IllegalArgumentException("Booking date cannot be null");
         }
         if(bookingStatus == null || bookingStatus.isEmpty()){
-            return null;
+            throw new IllegalArgumentException("Booking status cannot be null or empty");
         }
         return new Booking.Builder()
                 .setBookingID(bookingID)
