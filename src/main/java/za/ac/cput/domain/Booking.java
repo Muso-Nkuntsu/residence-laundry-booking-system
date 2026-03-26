@@ -9,10 +9,17 @@ public class Booking {
         private LocalDate bookingDate;
         private String bookingStatus;
 
+        private Student student;
+        private LaundryMachine laundryMachine;
+        private TimeSlot timeSlot;
+
         private Booking(Builder builder) {
             this.bookingID = builder.bookingID;
             this.bookingDate = builder.bookingDate;
             this.bookingStatus = builder.bookingStatus;
+            this.student = builder.student;
+            this.laundryMachine = builder.laundryMachine;
+            this.timeSlot = builder.timeSlot;
         }
 
     @Override
@@ -25,15 +32,29 @@ public class Booking {
     }
 
     public String getBookingID() {
-        return bookingID;
+
+            return bookingID;
     }
 
     public String getBookingStatus() {
-        return bookingStatus;
+
+            return bookingStatus;
     }
 
     public LocalDate getBookingDate() {
         return bookingDate;
+    }
+
+    public Student getStudent() {
+        return student;
+    }
+
+    public LaundryMachine getLaundryMachine() {
+        return laundryMachine;
+    }
+
+    public TimeSlot getTimeSlot() {
+        return timeSlot;
     }
 
     public static class Builder {
@@ -41,13 +62,10 @@ public class Booking {
             private String bookingID;
             private LocalDate bookingDate;
             private String bookingStatus;
+            private Student student;
+            private LaundryMachine laundryMachine;
+            private TimeSlot timeSlot;
 
-            public Builder createBooking(String bookingID, LocalDate bookingDate, String bookingStatus){
-                this.bookingID = bookingID;
-                this.bookingDate = bookingDate;
-                this.bookingStatus = bookingStatus;
-                return this;
-        }
 
             public Builder setBookingID(String bookingID) {
                 this.bookingID = bookingID;
@@ -64,7 +82,32 @@ public class Booking {
                 return this;
             }
 
-            public Booking build() {
+        public Builder setStudent(Student student) {
+            this.student = student;
+            return this;
+        }
+
+        public Builder setLaundryMachine(LaundryMachine laundryMachine) {
+            this.laundryMachine = laundryMachine;
+            return this;
+        }
+
+        public Builder setTimeSlot(TimeSlot timeSlot) {
+            this.timeSlot = timeSlot;
+            return this;
+        }
+        public Builder copy(Booking booking) {
+            this.bookingID = booking.bookingID;
+            this.bookingDate = booking.bookingDate;
+            this.bookingStatus = booking.bookingStatus;
+            this.student = booking.student;
+            this.laundryMachine = booking.laundryMachine;
+            this.timeSlot = booking.timeSlot;
+            return this;
+        }
+
+
+        public Booking build() {
                 return new Booking(this);
             }
         }
