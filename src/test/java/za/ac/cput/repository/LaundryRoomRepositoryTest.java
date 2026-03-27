@@ -10,7 +10,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.domain.LaundryMachine;
 import za.ac.cput.domain.LaundryRoom;
-import za.ac.cput.repository.LaundryRoomRepository;
+import za.ac.cput.repository.Impl.LaundryRoomRepository;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -5,9 +5,10 @@
 
 
 
-package za.ac.cput.repository;
+package za.ac.cput.repository.Impl;
 
 import za.ac.cput.domain.LaundryRoom;
+import za.ac.cput.repository.ILaundryRoomRepository;
 
 import java.util.HashSet;
 import java.util.Set;

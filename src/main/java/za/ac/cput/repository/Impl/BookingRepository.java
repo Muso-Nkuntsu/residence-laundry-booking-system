@@ -4,8 +4,9 @@
  * Date: 26 March 2026
  * */
 
-package za.ac.cput.repository;
+package za.ac.cput.repository.Impl;
 import za.ac.cput.domain.Booking;
+import za.ac.cput.repository.iBookingRepository;
 
 import java.util.HashSet;
 import java.util.Set;

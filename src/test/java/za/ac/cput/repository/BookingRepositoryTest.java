@@ -14,6 +14,7 @@ import za.ac.cput.domain.Booking;
 import za.ac.cput.domain.LaundryMachine;
 import za.ac.cput.domain.Student;
 import za.ac.cput.domain.TimeSlot;
+import za.ac.cput.repository.Impl.BookingRepository;
 
 import java.time.LocalDate;
 import java.time.LocalTime;

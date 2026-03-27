@@ -15,11 +15,10 @@ import za.ac.cput.domain.TimeSlot;
 import za.ac.cput.factory.BookingFactory;
 import za.ac.cput.factory.LaundryMachineFactory;
 import za.ac.cput.factory.StudentFactory;
-import za.ac.cput.repository.BookingRepository;
-import za.ac.cput.repository.LaundryMachineRepository;
-import za.ac.cput.repository.StudentRepository;
+import za.ac.cput.repository.Impl.BookingRepository;
+import za.ac.cput.repository.Impl.LaundryMachineRepository;
+import za.ac.cput.repository.Impl.StudentRepository;
 
-import java.awt.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
 

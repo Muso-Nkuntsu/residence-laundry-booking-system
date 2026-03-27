@@ -4,7 +4,7 @@
  * Date: 24 March 2026
  * */
 
-package za.ac.cput.repository;
+package za.ac.cput.repository.Impl;
 
 import za.ac.cput.domain.LaundryMachine;
 import za.ac.cput.repository.ILaundryMachineRepository;

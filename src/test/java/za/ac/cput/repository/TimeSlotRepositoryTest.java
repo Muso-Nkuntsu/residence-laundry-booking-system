@@ -9,6 +9,8 @@ package za.ac.cput.repository;
 import org.junit.jupiter.api.*;
 import za.ac.cput.domain.TimeSlot;
 import za.ac.cput.factory.TimeSlotFactory;
+import za.ac.cput.repository.Impl.TimeSlotRepository;
+
 import java.time.LocalTime;
 import static org.junit.jupiter.api.Assertions.*;
 

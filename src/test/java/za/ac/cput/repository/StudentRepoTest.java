@@ -2,6 +2,8 @@ package za.ac.cput.repository;
 import org.junit.jupiter.api.*;
 import za.ac.cput.domain.Student;
 import za.ac.cput.factory.StudentFactory;
+import za.ac.cput.repository.Impl.StudentRepository;
+
 import static org.junit.jupiter.api.Assertions.*;
 
  class StudentRepoTest {
