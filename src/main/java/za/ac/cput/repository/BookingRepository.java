@@ -6,14 +6,17 @@ import java.util.Set;
 
 public class BookingRepository implements iBookingRepository {
 
-    private static BookingRepository repository = null;
+    //Changed this static BookingRepo into public
+    public static BookingRepository repository = null;
     private Set<Booking> bookingDB;
 
-    private BookingRepository() {
+    //I changed the repository into public
+    public BookingRepository() {
         bookingDB = new HashSet<>();
     }
 
-    static BookingRepository getRepository() {
+    //Changed this also
+    public static BookingRepository getRepository() {
         if (repository == null) {
             repository = new BookingRepository();
         }

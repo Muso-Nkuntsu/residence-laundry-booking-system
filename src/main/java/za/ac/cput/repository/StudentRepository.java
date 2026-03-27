@@ -7,10 +7,10 @@ import za.ac.cput.domain.Student;
 
 public class StudentRepository implements IStudentRepository {
     public static StudentRepository repository = null;
-    private Set<Student> studentStorage;
+    private Set<Student> studentDB;
 
     private StudentRepository(){
-        studentStorage = new HashSet<>();
+        studentDB = new HashSet<>();
     }
     public static StudentRepository getRepository(){
         if (repository == null) {
@@ -23,12 +23,12 @@ public class StudentRepository implements IStudentRepository {
         if( existsById(student.getStudentId())){
             return null;
         }
-        studentStorage.add(student);
+        studentDB.add(student);
         return student;
     }
     @Override
     public Student read(String studentId){
-        return studentStorage.stream()
+        return studentDB.stream()
                 .filter(s -> s.getStudentId().equals(studentId))
                 .findFirst()
                 .orElse(null);
@@ -37,34 +37,35 @@ public class StudentRepository implements IStudentRepository {
     public Student update(Student student){
         Student existing = read(student.getStudentId());
         if (existing != null) {
-            studentStorage.remove(existing);
-            studentStorage.add(student);
+            studentDB.remove(existing);
+            studentDB.add(student);
             return student;
         }
         return null;
     }
     @Override
     public boolean delete(String studentId){
-        if (studentId != null) {
-            studentStorage.remove(studentId);
+        Student existing = read(studentId);
+        if (existing != null) {
+            studentDB.remove(existing);
             return true;
         }
         return false;
     }
     @Override
     public Set<Student> getAll(){
-        return studentStorage;
+        return studentDB;
     }
     @Override
     public Student findByEmail(String email){
-        return studentStorage.stream()
+        return studentDB.stream()
                 .filter(s->s.getEmail().equalsIgnoreCase(email))
                 .findFirst()
                 .orElse(null);
     }
     @Override
     public boolean existsById(String studentId){
-        return studentStorage.stream()
+        return studentDB.stream()
                 .anyMatch(s-> s.getStudentId().equals(studentId));
     }
 

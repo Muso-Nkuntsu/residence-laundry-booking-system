@@ -6,7 +6,7 @@ public class TimeSlot {
         private LocalTime startTime;
         private LocalTime endTime;
 
-        private TimeSlot(Builder builder) {
+        public TimeSlot(Builder builder) {
             this.timeSlotId = builder.timeSlotId;
             this.startTime = builder.startTime;
             this.endTime = builder.endTime;

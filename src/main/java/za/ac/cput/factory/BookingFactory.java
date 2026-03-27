@@ -1,12 +1,20 @@
 package za.ac.cput.factory;
 
 import za.ac.cput.domain.Booking;
+import za.ac.cput.domain.LaundryMachine;
+import za.ac.cput.domain.Student;
+import za.ac.cput.domain.TimeSlot;
 
 import java.time.LocalDate;
 
 public class BookingFactory {
 
-    public static Booking createBooking(String bookingID, LocalDate bookingDate, String bookingStatus){
+    //I added other attributes to the Booking factory create: added TimeSlot class, LaundryMachine, Student
+    public static Booking createBooking(String bookingID, LocalDate bookingDate,
+                                        String bookingStatus,
+                                        Student student,
+                                        LaundryMachine machine,
+                                        TimeSlot timeSlot){
         if(bookingID == null || bookingID.isEmpty()){
             throw new IllegalArgumentException("Booking ID cannot be null or empty");
         }
@@ -20,6 +28,9 @@ public class BookingFactory {
                 .setBookingID(bookingID)
                 .setBookingDate(bookingDate)
                 .setBookingStatus(bookingStatus)
+                .setStudent(student)
+                .setLaundryMachine(machine)
+                .setTimeSlot(timeSlot)
                 .build();
     }
 }

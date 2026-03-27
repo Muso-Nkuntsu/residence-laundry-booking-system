@@ -11,18 +11,6 @@ public class LaundryMachine {
         this.machineNumber = builder.machineNumber;
         this.status = builder.status;
     }
-    public String getMachineId() {
-        return machineId;
-    }
-
-    public int getMachineNumber() {
-        return machineNumber;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
 
     public String getMachineId() {
         return machineId;
